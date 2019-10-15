@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    background-color: red;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    
+}
+.text-box{
+    background-color: aqua;
+    width: 500px;
+}
+.image-box{
+    background-color: rgb(233, 233, 22);
+
+}
+img{
+    width: 500px;
+}
+/*set width for parent container element!
+also margin: 0 auto*/
+.container-2{
+    display: flex;
+    background-color: orange;
+    width: 1200px;
+    margin: 0 auto;
+    /*set justify-content to space-evenly or around or between
+    no need for justify-content: center
+    centering happens by changing width*/
+    justify-content: space-evenly;
+    
+}
+/*set width for child elements with flex-basis or width*/
+.box{
+    background-color: aqua;
+    flex-basis: 130px;
+    border: #000 1px solid;
+    text-align: center;
+}
