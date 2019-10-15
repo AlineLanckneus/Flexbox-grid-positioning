@@ -50,10 +50,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     
 }
-
+/*set widht for all direct descendants of container!*/
 .container-1 img{
-    height: auto;
-    width: 30rem;
+    
+    width: 450px;
 }
 header h1{
     background-color: #000;
@@ -72,39 +72,46 @@ div h2{
 div p{
     line-height: 1.5rem;
 }
-
+/*set width of container element, standard is 1280x720px (HD)
+also margin: 0 auto*/
 .container-1 {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 1000px;
+    margin: 0 auto;
+    /*background-color: red;*/
+    /*
+    unnecessary to mention flex-direction:row 
+    flex-direction: row;*/
+    justify-content: space-evenly;
     margin-bottom: 5rem;
-    align-content: center;
+    /*align-content: center;*/
 }
-    
-
-
+/*set width for container children elements*/
+.container-1 div{
+    flex-basis: 450px;
+    text-align: center; 
+}
+/*set width of container element, standard is 1280x720px (HD)
+also margin: 0 auto*/
 .container-2 {
     display: flex;
-    justify-content: center;
-    align-content: center;
+    width: 1200px;
+    margin: 0 auto;
+    /*background-color: aqua;*/
+    justify-content: space-evenly;/*instead of center, not needed here*/
+    /*align-content: center; not needed here*/
 
 }
-
-.container-1 div{
-    flex-basis: 25%;
-    text-align: center;
-    margin: 2rem;
-    
-}
-
+/*set width for container children elements*/
 .container-2 .box {
-    flex-basis: 15%;
+    flex-basis: 250px;
     text-align: center;
     color: rgb(146, 141, 141);
-    margin: 2rem;
 }
 .container-2 img{
-    width: 12.5rem;
-    height: auto;
-    margin-bottom: 0.5rem;
+    width: 250px;/*width equal to width of .container-2 .box*/
 }
+/*@media (min-width: 200px){
+    .container-1, .container-2{
+        display: flex;}
+} can't figure out how to make this work*/
